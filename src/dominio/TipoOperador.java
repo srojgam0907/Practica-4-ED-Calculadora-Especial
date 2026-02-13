@@ -2,10 +2,10 @@ package dominio;
 
 public enum TipoOperador {
 
-	suma('+'),
-	resta('-'),
-	multiplicacion('*'),
-	division('/');
+	SUMA('+'),
+	RESTA('-'),
+	MULTIPLICACION('*'),
+	DIVISION('/'); 
 
 	private char symbol;
 	
