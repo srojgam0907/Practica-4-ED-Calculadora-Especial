@@ -2,8 +2,10 @@ package dominio;
 
 public enum TipoComando {
 
-	list,
-	reset,
-	result,
-	quit 
+	LIST,
+	RESET,
+	RESULT,
+	QUIT,
+	CALCULO,
+	ERROR 
 }
