@@ -2,7 +2,6 @@ package dominio;
 
 import java.util.ArrayList;
 import java.util.List;
-import app.Consola;
 
 public class Calculadora {
 
@@ -56,7 +55,18 @@ public class Calculadora {
 		
 	}
 	
+	public void resetear() {
+		this.resultadoFinal= 0;
+		this.historial.clear();
+	}
 	
+	public double getResultadoFinal() {
+		return resultadoFinal;
+	}
+	
+	public List<Operacion> getHistorial() {
+		return new ArrayList<>(historial); 
+	}
 }
 
 
