@@ -30,5 +30,19 @@ public class Calculadora {
 		return a / b; 
 
 	}
+	
+	public double calcular(List<Double> numeros, List<TipoOperador> operadores, String entrada) {
+		double resultadoAcumulado= numeros.get(0);
+		
+		for(int i=0; i<operadores.size(); i++) {
+			resultadoAcumulado= ejecutar(resultadoAcumulado, operadores.get(i), numeros.get(i));
+		}
+		
+		resultadoFinal= resultadoAcumulado; //Actualiza el estado del ultimo resultado obtenido
+		Operacion nuevaOperacion= new Operacion(entrada, resultadoAcumulado); //Creas el objeto operacion
+		historial.add(nuevaOperacion); //Añades la ultima operacion al historial
+		
+		return resultadoAcumulado;
+	}
 
 }
