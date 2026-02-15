@@ -34,7 +34,7 @@ public class Calculadora {
 		double resultadoAcumulado= numeros.get(0);
 		
 		for(int i=0; i<operadores.size(); i++) {
-			resultadoAcumulado= ejecutar(resultadoAcumulado, operadores.get(i), numeros.get(i));
+			resultadoAcumulado= ejecutar(resultadoAcumulado, operadores.get(i), numeros.get(i+1));
 		}
 		
 		resultadoFinal= resultadoAcumulado; //Actualiza el estado del ultimo resultado obtenido
