@@ -23,7 +23,7 @@ public class Consola {
 	 * Imprime por pantalla un mensaje para el usuario
 	 * @param mensaje El mensaje dirigido al usuario
 	 */
-	public void escribirMensaje(String mensaje) {
+	public void escribirMensaje(Object mensaje) { 
 		System.out.println(mensaje);
 	}
 	
