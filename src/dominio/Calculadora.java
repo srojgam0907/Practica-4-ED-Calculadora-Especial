@@ -45,4 +45,35 @@ public class Calculadora {
 		return resultadoAcumulado;
 	}
 
+	private double ejecutar(double a, TipoOperador operador, double b) {
+
+		return switch(operador) {
+		case SUMA -> sumar(a, b);
+		case RESTA -> restar(a, b);
+		case MULTIPLICACION -> multiplicar(a, b);
+		case DIVISION -> dividir(a, b);
+		};
+		
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
