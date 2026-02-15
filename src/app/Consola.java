@@ -4,15 +4,35 @@ import java.util.Scanner;
 
 public class Consola {
 
-	@SuppressWarnings("unused")
-	private Scanner kb= new Scanner(System.in);
+	private Scanner kb;
+	
+	public Consola() {
+		this.kb= new Scanner(System.in);
+	}
 	
 	/**
-     * Muestra un texto por consola sin salto de línea.
-     *
-     * @param texto Texto que se desea mostrar.
-     */
-    public void escribir(String texto) { //Hay que hacer el bucle que comprube que está bien escrito
-        System.out.print(texto);
-    }
+	 * Imprime el prompt correspondiente y lee lo que introduce el usuario
+	 * @return el texto que introduce el usuario
+	 */
+	public String leer() {
+		System.out.print("> ");
+		return kb.nextLine();
+	}
+	
+	/**
+	 * Imprime por pantalla un mensaje para el usuario
+	 * @param mensaje El mensaje dirigido al usuario
+	 */
+	public void escribirMensaje(String mensaje) {
+		System.out.println(mensaje);
+	}
+	
+	/**
+	 * Imprime por pantalla una mensaje de error
+	 * @param mensaje El mensaje para informar al usuario
+	 */
+	public void escribirError(String mensaje) {
+		System.out.println("ERROR: " + mensaje); 
+	}
+	
 }
