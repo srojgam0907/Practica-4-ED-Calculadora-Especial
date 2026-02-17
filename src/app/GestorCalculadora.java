@@ -8,12 +8,20 @@ public class GestorCalculadora {
 	private Analizador analizador;
 	private Consola consola;
 	
+	/**
+	 * Crea un nuevo objeto del gestor de la calculadora
+	 */
 	public GestorCalculadora() {
 		this.calculadora= new Calculadora();
 		this.analizador= new Analizador();
 		this.consola= new Consola();
 	}
 	
+	/**
+	 * Se encarga de iniciar el programa. 
+	 * Imprime una bienvenida y empieza un bucle que se queda 
+	 * activo hasta que el usuario introduce el comando QUIT
+	 */
 	public void init() {
 		boolean seguir= true;
 		consola.escribirMensaje("CALCULADORA\n-----------------");
@@ -33,11 +41,21 @@ public class GestorCalculadora {
 		}
 	}
 	
+	/**
+	 * Llama al metodo calcular de la clase Calculadora 
+	 * y muestra el resultado
+	 * @param resultado
+	 * @param entrada 
+	 */
 	private void hacerOperacion(ResultadoAnalisis resultado, String entrada) {
 		double result= calculadora.calcular(resultado.numeros(), resultado.operadores(), entrada);
 		consola.escribirMensaje(result); 
 	}
 	
+	/**
+	 * Muestra el historial de operaciones en la pantalla 
+	 * con un formato concreto
+	 */
 	private void mostrarHistorial() {
 		List<Operacion> historial= calculadora.getHistorial();
 		
